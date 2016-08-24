@@ -13,6 +13,8 @@ See here for more details: https://GeoDienstenCentrum.github.io/sass-maven-plugi
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/nl.geodienstencentrum.maven/sass-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/nl.geodienstencentrum.maven/sass-maven-plugin/)
 
+[![Dependency Status](https://dependencyci.com/github/GeoDienstenCentrum/sass-maven-plugin/badge)](https://dependencyci.com/github/GeoDienstenCentrum/sass-maven-plugin)
+
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/GeoDienstenCentrum/sass-maven-plugin.svg)](http://isitmaintained.com/project/GeoDienstenCentrum/sass-maven-plugin "Percentage of issues still open")
 
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/GeoDienstenCentrum/sass-maven-plugin.svg)](http://isitmaintained.com/project/GeoDienstenCentrum/sass-maven-plugin "Average time to resolve an issue")
