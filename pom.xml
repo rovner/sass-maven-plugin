@@ -782,6 +782,7 @@
 									<ruleset>${basedir}/pmd-ruleset.xml</ruleset>
 								</rulesets>
 								<linkXRef>true</linkXRef>
+								<xrefLocation>${project.reporting.outputDirectory}/xref</xrefLocation>
 								<includeXmlInSite>true</includeXmlInSite>
 								<minimumTokens>100</minimumTokens>
 								<targetJdk>${project.build.targetVersion}</targetJdk>

@@ -18,12 +18,12 @@ before_install:
          brew install Caskroom/cask/java;
      fi
    - echo $JAVA_HOME
-# requires sudo   
+# requires sudo
 #  - java -Xshare:dump
 
 install:
   # install without any testing to get dependencies in place
-  - mvn install -U -Dmaven.test.skip=true -B -V -fae -T2
+  - mvn install -Dmaven.test.skip=true -B -V -fae -T2
 
 script:
   # execute unit and integration tests
