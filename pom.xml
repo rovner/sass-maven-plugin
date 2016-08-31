@@ -699,8 +699,8 @@
 							<configuration>
 								<publishDateLocale>en</publishDateLocale>
 								<includeOpenIssues>false</includeOpenIssues>
-								<sortColumnNames>Fix Version DESC,Id DESC</sortColumnNames>
-								<columnNames>Fix Version, Id, Reporter, Summary, Type, Updated</columnNames>
+								<sortColumnNames>Fix Version DESC</sortColumnNames>
+								<columnNames>Fix Version, Id, Type, Reporter, Summary</columnNames>
 							</configuration>
 							<reportSets>
 								<reportSet>
