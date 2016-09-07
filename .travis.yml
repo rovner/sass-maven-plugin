@@ -2,11 +2,18 @@ language: java
 
 sudo: false
 
+env:
+  global:
+    - BASEURL=https://www-eu.apache.org/dist/maven/maven-3/VERSION/binaries/apache-maven-VERSION-bin.zip
+    - FILE=apache-maven-VERSION-bin.zip
+    - DIR=apache-maven-VERSION
+    - VERSION=3.3.9
+
 before_install:
    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-         wget --no-check-certificate https://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip;
-         unzip -qq apache-maven-3.3.9-bin.zip;
-         export M2_HOME=$PWD/apache-maven-3.3.9;
+         wget --no-check-certificate $(echo -n $BASEURL | sed -e 's#VERSION#'$VERSION'#g');
+         unzip -qq $(echo -n $FILE | sed -e 's#VERSION#'$VERSION'#');
+         export M2_HOME=$PWD/$(echo -n $DIR | sed -e 's#VERSION#'$VERSION'#');
          export PATH=$M2_HOME/bin:$PATH;
      fi
    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
@@ -17,19 +24,22 @@ before_install:
          brew tap caskroom/cask;
          brew install Caskroom/cask/java;
      fi
-   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$JVM" == "latest" ]; then
-         sudo apt-get update -qq;
-         sudo /bin/echo -e oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections;
-         sudo apt-get install -y oracle-java9-installer;
-         sudo apt-get install -y oracle-java9-unlimited-jce-policy;
-         sudo update-java-alternatives -s java-9-oracle;
-     fi
+#   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$JVM" == "latest" ]; then
+#         sudo apt-get update -qq;
+#         sudo /bin/echo -e oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections;
+#         sudo apt-get install -y oracle-java9-installer;
+#         sudo apt-get install -y oracle-java9-unlimited-jce-policy;
+#         sudo update-java-alternatives -s java-9-oracle;
+#     fi
    - if [ "$TRAVIS_JDK_VERSION" == oraclejdk9 ]; then
          sudo rm /etc/mavenrc;
      fi
+   - echo $TRAVIS_OS_NAME
    - echo $JAVA_HOME
    - echo $TRAVIS_JDK_VERSION
-# requires sudo   
+   - echo $VERSION
+   - echo $M2_HOME
+# requires sudo
 #  - java -Xshare:dump
 
 install:
@@ -39,14 +49,16 @@ install:
 script:
   # execute unit and integration tests
   - mvn -e -fae -B -Dfailsafe.useFile=false -T2 clean test verify
-  - if [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ]; then
+  - if [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ] && [ "$VERSION" == "3.3.9" ]; then
          mvn javadoc:javadoc;
          mvn javadoc:test-javadoc;
     fi
 
 after_success:
-  # generate code coverage report
-  - mvn -B -e -fae -Ptravis-ci clean verify jacoco:report coveralls:report
+  # generate code coverage report, just for oraclejdk8 and latest maven
+  - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] && [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ]; then
+      mvn -B -e -fae -Ptravis-ci clean verify jacoco:report coveralls:report;
+    fi
 
 os:
   - linux
@@ -65,8 +77,12 @@ matrix:
       group: edge
     - os: linux
       jdk: oraclejdk8
+      env: VERSION=3.3.9
     - os: linux
-      # needs to be manually installed
+      jdk: oraclejdk8
+      env: VERSION=3.2.5
+    - os: linux
+      # Java 9 needs to be manually installed
       # see: https://github.com/travis-ci/travis-ci/issues/2968#issuecomment-149164058
       jdk: oraclejdk9
       #env: JVM=latest
@@ -84,9 +100,10 @@ matrix:
 #   - env: JVM=latest
 #   - os: osx
    - jdk: oraclejdk9
-   - jdk: openjdk8
+#   - jdk: openjdk8
 #   - env: JVM=latest
-   - env: JAVA_HOME=/usr/lib/jvm/java-7-oracle
+#   - env: JAVA_HOME=/usr/lib/jvm/java-7-oracle
+#   - jdk: oraclejdk7
 
 cache:
   brew: true
