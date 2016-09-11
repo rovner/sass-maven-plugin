@@ -3,7 +3,7 @@ sass-maven-plugin
 
 A Maven Plugin to compile and lint Sass (scss) files.
 
-See here for more details: https://GeoDienstenCentrum.github.io/sass-maven-plugin/plugin-info.html
+For more details: https://GeoDienstenCentrum.github.io/sass-maven-plugin/plugin-info.html
 
 [![Coverage Status](https://coveralls.io/repos/github/GeoDienstenCentrum/sass-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/GeoDienstenCentrum/sass-maven-plugin?branch=master)
 

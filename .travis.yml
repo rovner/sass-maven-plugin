@@ -8,6 +8,8 @@ env:
     - FILE=apache-maven-VERSION-bin.zip
     - DIR=apache-maven-VERSION
     - VERSION=3.3.9
+    - secure: NJ1w0QJMpWHDz37+f6V1vZ2on7dDVxIup7jtjlvxI192l/ETjEHop2DHJp7HEjZ6ZcC9ZJAClSW0ew7az4GaaHxvFMb2xkxH7weOPE+REZM7xHGjkYI1ElKj87d68idUT6N0kzYmN5k1wOhCvMiIUPSUMia83TfTl4USAGOVKPs=
+    - secure: kwD93y0KiVmGHvefffVn7Hd7T1ZeZh+4E41LqXBAYxYGFCSYXrPlNygO6dxjKgfSSSPXqXu9SgNXdEwZez/qoIA+TAm3VOsKVcKaIJ/0En2hmUp/yLmQa3Rc9rkDdCodDkYumD6650I0l2s17w5YATVTeoUfgyAbGZLRLlmKrmY=
 
 before_install:
    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
@@ -56,8 +58,16 @@ script:
 
 after_success:
   # generate code coverage report, just for oraclejdk8 and latest maven
-  - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] && [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ]; then
-      mvn -B -e -fae -Ptravis-ci clean verify jacoco:report coveralls:report;
+  - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] &&
+       [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ]; then
+         mvn -B -e -fae -Ptravis-ci clean verify jacoco:report coveralls:report;
+    fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] &&
+       [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
+       [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+         mvn deploy --settings .travis/settings.xml -DskipTests=true -B;
+    else
+        echo "Not deploying snapshot artifact";
     fi
 
 os:
