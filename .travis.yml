@@ -8,8 +8,10 @@ env:
     - FILE=apache-maven-VERSION-bin.zip
     - DIR=apache-maven-VERSION
     - VERSION=3.3.9
-    - secure: NJ1w0QJMpWHDz37+f6V1vZ2on7dDVxIup7jtjlvxI192l/ETjEHop2DHJp7HEjZ6ZcC9ZJAClSW0ew7az4GaaHxvFMb2xkxH7weOPE+REZM7xHGjkYI1ElKj87d68idUT6N0kzYmN5k1wOhCvMiIUPSUMia83TfTl4USAGOVKPs=
-    - secure: kwD93y0KiVmGHvefffVn7Hd7T1ZeZh+4E41LqXBAYxYGFCSYXrPlNygO6dxjKgfSSSPXqXu9SgNXdEwZez/qoIA+TAm3VOsKVcKaIJ/0En2hmUp/yLmQa3Rc9rkDdCodDkYumD6650I0l2s17w5YATVTeoUfgyAbGZLRLlmKrmY=
+    - secure: "NJ1w0QJMpWHDz37+f6V1vZ2on7dDVxIup7jtjlvxI192l/ETjEHop2DHJp7HEjZ6ZcC9ZJAClSW0ew7az4GaaHxvFMb2xkxH7weOPE+REZM7xHGjkYI1ElKj87d68idUT6N0kzYmN5k1wOhCvMiIUPSUMia83TfTl4USAGOVKPs="
+    - secure: "kwD93y0KiVmGHvefffVn7Hd7T1ZeZh+4E41LqXBAYxYGFCSYXrPlNygO6dxjKgfSSSPXqXu9SgNXdEwZez/qoIA+TAm3VOsKVcKaIJ/0En2hmUp/yLmQa3Rc9rkDdCodDkYumD6650I0l2s17w5YATVTeoUfgyAbGZLRLlmKrmY="
+    - secure: "m3SDmm4eeTd0n4IeraLOtsvPisCyepmMgW/pgx7tvpxrFoGaHJjXiYC4uj50nktIzkbe899HZBsCwd+G3HD7EmgvksBqIwT3FFSh4fwCrvdFMGxZ2i/E6vd2yNhucb+EbXu7OtCWvVzmKjbkORxTljOra7paXV0DRxbVbEss+As="
+
 
 before_install:
    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
@@ -42,7 +44,7 @@ before_install:
    - echo $VERSION
    - echo $M2_HOME
 # requires sudo
-#  - java -Xshare:dump
+#  - sudo java -Xshare:dump
 
 install:
   # install without any testing to get dependencies in place
@@ -68,6 +70,13 @@ after_success:
          mvn deploy --settings .travis/settings.xml -DskipTests=true -B;
     else
         echo "Not deploying snapshot artifact";
+    fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] &&
+       [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
+       [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
+          mvn -e -fae -B site-deploy --settings .travis/settings.xml;
+    else
+          echo -n "not deploying maven site";
     fi
 
 os:
