@@ -10,8 +10,7 @@ env:
     - VERSION=3.3.9
     - secure: "NJ1w0QJMpWHDz37+f6V1vZ2on7dDVxIup7jtjlvxI192l/ETjEHop2DHJp7HEjZ6ZcC9ZJAClSW0ew7az4GaaHxvFMb2xkxH7weOPE+REZM7xHGjkYI1ElKj87d68idUT6N0kzYmN5k1wOhCvMiIUPSUMia83TfTl4USAGOVKPs="
     - secure: "kwD93y0KiVmGHvefffVn7Hd7T1ZeZh+4E41LqXBAYxYGFCSYXrPlNygO6dxjKgfSSSPXqXu9SgNXdEwZez/qoIA+TAm3VOsKVcKaIJ/0En2hmUp/yLmQa3Rc9rkDdCodDkYumD6650I0l2s17w5YATVTeoUfgyAbGZLRLlmKrmY="
-    - secure: "m3SDmm4eeTd0n4IeraLOtsvPisCyepmMgW/pgx7tvpxrFoGaHJjXiYC4uj50nktIzkbe899HZBsCwd+G3HD7EmgvksBqIwT3FFSh4fwCrvdFMGxZ2i/E6vd2yNhucb+EbXu7OtCWvVzmKjbkORxTljOra7paXV0DRxbVbEss+As="
-
+    - secure: "hNjTA8dataGmylZo0QY4uhx8BNKQfJzfwdMMO7EdbfpEyqj9K7lIDIpcU/vCDgzUF+nISY0iaxr0ErguFYIat5VWM/4tKwQjfK+2MFNjzLlBsAVWirIsLoASzSIUroWKVUwSg61qTmuEf5A+aKhxNrvWALXaHgCoPU8DOpE2P6s="
 
 before_install:
    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
