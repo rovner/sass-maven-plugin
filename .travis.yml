@@ -27,13 +27,13 @@ before_install:
          brew tap caskroom/cask;
          brew install Caskroom/cask/java;
      fi
-#   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$JVM" == "latest" ]; then
-#         sudo apt-get update -qq;
-#         sudo /bin/echo -e oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections;
-#         sudo apt-get install -y oracle-java9-installer;
-#         sudo apt-get install -y oracle-java9-unlimited-jce-policy;
-#         sudo update-java-alternatives -s java-9-oracle;
-#     fi
+   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$JVM" == "latest" ]; then
+         sudo apt-get update -qq;
+         sudo /bin/echo -e oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections;
+         sudo apt-get install -y oracle-java9-installer;
+         sudo apt-get install -y oracle-java9-unlimited-jce-policy;
+         sudo update-java-alternatives -s java-9-oracle;
+     fi
    - if [ "$TRAVIS_JDK_VERSION" == oraclejdk9 ]; then
          sudo rm /etc/mavenrc;
      fi
@@ -42,6 +42,7 @@ before_install:
    - echo $TRAVIS_JDK_VERSION
    - echo $VERSION
    - echo $M2_HOME
+
 # requires sudo
 #  - sudo java -Xshare:dump
 
@@ -66,14 +67,14 @@ after_success:
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] &&
        [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
        [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-         mvn deploy --settings .travis/settings.xml -DskipTests=true -B;
+         travis_wait mvn deploy --settings .travis/settings.xml -DskipTests=true -B;
     else
         echo "Not deploying snapshot artifact";
     fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ] && [ "$VERSION" == "3.3.9" ] &&
        [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
        [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
-          mvn -e -fae -B site-deploy --settings .travis/settings.xml;
+          travis_wait mvn -e -fae -B site-deploy --settings .travis/settings.xml;
     else
           echo -n "not deploying maven site";
     fi
@@ -103,7 +104,7 @@ matrix:
       # Java 9 needs to be manually installed
       # see: https://github.com/travis-ci/travis-ci/issues/2968#issuecomment-149164058
       jdk: oraclejdk9
-      #env: JVM=latest
+      env: JVM=latest
       sudo: required
       dist: trusty
       group: edge
