@@ -21,7 +21,6 @@ before_install:
      fi
    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
          brew update --quiet;
-         brew upgrade maven;
      fi
    - if [ "$TRAVIS_OS_NAME" == "osx" ] && [ "$JVM" == "latest" ]; then
          brew tap caskroom/cask;
