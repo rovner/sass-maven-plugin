@@ -13,7 +13,7 @@ skip_tags: true
 
 install:
   - cmd: echo %PATH%
-  - cmd: java -version
+  - cmd: java -XshowSettings:vm -version
   - cd C:\projects\sass-maven-plugin
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-http-proxy.ps1'))
   - ps: .\.appveyor\set-maven-proxy.ps1
@@ -23,7 +23,7 @@ build: off
 
 test_script:
   - cd C:\projects\sass-maven-plugin
-  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false -T2 clean test verify
+  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false clean test verify
 
 environment:
 
