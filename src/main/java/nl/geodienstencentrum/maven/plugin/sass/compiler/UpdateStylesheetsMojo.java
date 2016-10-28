@@ -22,6 +22,8 @@ package nl.geodienstencentrum.maven.plugin.sass.compiler;
 import static org.apache.maven.plugins.annotations.LifecyclePhase.PROCESS_SOURCES;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.PathMatcher;
 import java.util.Collection;
 import nl.geodienstencentrum.maven.plugin.sass.AbstractSassMojo;
 import org.apache.commons.io.DirectoryWalker;
@@ -88,7 +90,7 @@ public class UpdateStylesheetsMojo extends AbstractSassMojo {
 
 		final LastModifiedWalker sourceWalker =
 		        new LastModifiedWalker(getSassSourceDirectory());
-		final LastModifiedWalker targetWalker = new LastModifiedWalker(destination);
+		final FilteredLastModifiedWalker targetWalker = new FilteredLastModifiedWalker(destination);
 		// If either directory is empty, we do a build to make sure
 		if (sourceWalker.getCount() == 0 || targetWalker.getCount() == 0) {
 			return true;
@@ -102,20 +104,58 @@ public class UpdateStylesheetsMojo extends AbstractSassMojo {
 	 *
 	 * @see File#lastModified()
 	 */
+	private class FilteredLastModifiedWalker extends LastModifiedWalker {
+		
+		/**
+		 * filter of the files.
+		 */
+		protected String filter;
+		
+		private PathMatcher pathMatcher;
+		
+		public FilteredLastModifiedWalker(File startDirectory) throws IOException {
+			this(startDirectory, "**/*.css");
+		}
+		
+		public FilteredLastModifiedWalker(File startDirectory, String filter) throws IOException {
+			this.filter = filter;
+			pathMatcher = FileSystems.getDefault().getPathMatcher("glob:" + this.filter );
+			walk(startDirectory, null);
+			getLog().info("Checked " + count + " filtered (" + this.filter + ") files for " + startDirectory);
+		}
+
+		/**
+		 * {@inheritDoc}
+		 */
+		@Override
+		protected void handleFile(final File file, final int depth,
+		        final Collection<Void> results) throws IOException {
+			if ( pathMatcher.matches( file.toPath() )) {
+				super.handleFile(file, depth, results);
+			}
+		}
+	}
+	
+	/**
+	 * Directorywalker that looks at the lastModified timestamp of files.
+	 *
+	 * @see File#lastModified()
+	 */
 	private class LastModifiedWalker extends DirectoryWalker<Void> {
 		/**
 		 * timestamp of the youngest file.
 		 */
-		private Long youngest;
+		protected Long youngest;
 		/**
 		 * timestamp of the oldest file.
 		 */
-		private Long oldest;
+		protected Long oldest;
 		/**
 		 * number of files in the directory.
 		 */
-		private int count = 0;
+		protected int count = 0;
 
+		public LastModifiedWalker(){}
 		/**
 		 * Create a "last modified" directory walker.
 		 * @param startDirectory The direcoty to start walking.
