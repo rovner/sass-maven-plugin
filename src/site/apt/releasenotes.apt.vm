@@ -18,17 +18,17 @@ ${project.name} ${project.version} Release Notes
 
 %{toc|section=1|fromDepth=2|toDepth=2}
 
-~~* ${project.version} Release Notes
+* ${project.version} Release Notes
 
-~~  A complete list of issues can be seen in the tracker
-~~  {{{${project.issueManagement.url}?q=milestone%3A${project.version}+is%3Aclosed}milestone ${project.version} }}.
+  A complete list of issues can be seen in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A${project.version}+is%3Aclosed}milestone ${project.version} }}.
 
-~~  This release features Compass version ${project.properties.get("compass.version")},
-~~  Bourbon version ${project.properties.get("bourbon.version")}
-~~  and Sass version ${project.properties.get("sass.version")}
-~~  running on JRuby ${project.properties.get("jruby.version")}.
-~~  Please check the {{{/${project.artifactId}/dependencies.html#provided}full dependencies}}
-~~  to find out about the specific Sass and other transitive dependencies included in this release.
+  This release features Compass version ${project.properties.get("compass.version")},
+  Bourbon version ${project.properties.get("bourbon.version")}
+  and Sass version ${project.properties.get("sass.version")}
+  running on JRuby ${project.properties.get("jruby.version")}.
+  Please check the {{{/${project.artifactId}/dependencies.html#provided}full dependencies}}
+  to find out about the specific Sass and other transitive dependencies included in this release.
 
 ~~** New
 
