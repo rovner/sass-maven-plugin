@@ -23,23 +23,22 @@ ${project.name} ${project.version} Release Notes
   A complete list of issues can be seen in the tracker
   {{{${project.issueManagement.url}?q=milestone%3A${project.version}+is%3Aclosed}milestone ${project.version} }}.
 
-  This release features Compass version ${project.properties.get("compass.version")},
-  Bourbon version ${project.properties.get("bourbon.version")}
+  This release features Bourbon version ${project.properties.get("bourbon.version")}
   and Sass version ${project.properties.get("sass.version")}
   running on JRuby ${project.properties.get("jruby.version")}.
   Please check the {{{/${project.artifactId}/dependencies.html#provided}full dependencies}}
   to find out about the specific Sass and other transitive dependencies included in this release.
 
-~~** New
+** New
 
-~~   *
+   * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
 
-~~   []
+   []
 
-~~ ** Enhancements and Fixes
+** Enhancements and Fixes
 
-~~  * Update Sass to version ${project.properties.get("sass.version")}, please check
-~~    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
+  * Update Sass to version ${project.properties.get("sass.version")}, please check
+    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
 
 ~~  * Update SCSS-Lint to version ${project.properties.get("scss-lint.version")}, please check
 ~~    the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
@@ -498,15 +497,7 @@ ${project.name} ${project.version} Release Notes
   []
 
 
-* 2.0 Release Notes
 
-  A complete list of issues can be seen in the tracker
-  {{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues?q=milestone%3A2.0d}milestone 2.0}}.
+* Archives
 
-** Enhancements
-
-  * update versions of Sass (3.4.9) and Compass (1.0.1)
-
-  * java version update
-
-  []
+  There are more releases in the {{{./oldreleasenotes.html}archive}}.
