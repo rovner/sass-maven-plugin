@@ -141,7 +141,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sass.version>3.5.0.pre.rc.1</sass.version>
-		<jruby.version>9.1.5.0</jruby.version>
+		<jruby.version>9.1.6.0</jruby.version>
 		<maven-libs.version>3.3.9</maven-libs.version>
 		<scss-lint.version>0.50.3</scss-lint.version>
 		<bourbon.version>4.2.7</bourbon.version>
@@ -349,7 +349,7 @@
 				<plugin>
 					<groupId>org.owasp</groupId>
 					<artifactId>dependency-check-maven</artifactId>
-					<version>1.4.3</version>
+					<version>1.4.4</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
