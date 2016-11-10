@@ -189,11 +189,16 @@
 					<groupId>rubygems</groupId>
 					<artifactId>rake</artifactId>
 				</exclusion>
-                <exclusion>
-                    <!-- we don't need this -->
-                    <groupId>rubygems</groupId>
-                    <artifactId>rainbow</artifactId>
-                </exclusion>
+				<exclusion>
+					<!-- override -->
+					<groupId>rubygems</groupId>
+					<artifactId>rainbow</artifactId>
+				</exclusion>
+				<exclusion>
+					<!-- we don't need this -->
+					<groupId>rubygems</groupId>
+					<artifactId>sass</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -203,13 +208,13 @@
 			<scope>provided</scope>
 			<type>gem</type>
 		</dependency>
-		<dependency>
+		<!--dependency>
 			<groupId>rubygems</groupId>
 			<artifactId>listen</artifactId>
 			<version>3.1.5</version>
 			<scope>provided</scope>
 			<type>gem</type>
-		</dependency>
+		</dependency -->
 		<dependency>
 			<groupId>rubygems</groupId>
 			<artifactId>bourbon</artifactId>
@@ -221,6 +226,11 @@
 					<!-- we don't need this -->
 					<groupId>rubygems</groupId>
 					<artifactId>thor</artifactId>
+				</exclusion>
+				<exclusion>
+					<!-- override -->
+					<groupId>rubygems</groupId>
+					<artifactId>sass</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
