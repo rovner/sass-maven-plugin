@@ -143,7 +143,7 @@
 		<sass.version>3.5.0.pre.rc.1</sass.version>
 		<jruby.version>9.1.6.0</jruby.version>
 		<maven-libs.version>3.3.9</maven-libs.version>
-		<scss-lint.version>0.50.3</scss-lint.version>
+		<scss-lint.version>0.51.0</scss-lint.version>
 		<bourbon.version>4.2.7</bourbon.version>
 		<maven.version />
 		<debug>true</debug>
@@ -344,7 +344,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>3.0.2</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -474,7 +474,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.7.7.201606060606</version>
+					<version>0.7.8</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>
