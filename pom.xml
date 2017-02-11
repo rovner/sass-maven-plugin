@@ -144,7 +144,7 @@
 		<jruby.version>9.1.7.0</jruby.version>
 		<maven-libs.version>3.3.9</maven-libs.version>
 		<scss-lint.version>0.52.0</scss-lint.version>
-		<bourbon.version>4.2.7</bourbon.version>
+		<bourbon.version>4.3.2</bourbon.version>
 		<maven.version />
 		<debug>true</debug>
 		<github.username />
@@ -474,7 +474,7 @@
 				<plugin>
 					<groupId>org.jacoco</groupId>
 					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>0.7.8</version>
+					<version>0.7.9</version>
 				</plugin>
 				<plugin>
 					<groupId>org.eluder.coveralls</groupId>

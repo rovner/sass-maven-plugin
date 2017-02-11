@@ -43,12 +43,12 @@ ${project.name} ${project.version} Release Notes
   * Update SCSS-Lint to version ${project.properties.get("scss-lint.version")}, please check
     the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
 
-~~  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
-~~    {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
+  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
+    {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
 
   * Update JRuby to ${project.properties.get("jruby.version")}
 
-~~  []
+  []
 
 * 2.22 Release Notes
 
