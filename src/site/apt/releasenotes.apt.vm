@@ -48,8 +48,10 @@ ${project.name} ${project.version} Release Notes
     {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
 
   * Update JRuby to ${project.properties.get("jruby.version")}
-  
+
   * Update Maven plugins
+
+  * fix scss-lint not reporting lint on Windows ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/146}#146}})
 
   []
 
