@@ -141,10 +141,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sass.version>3.5.0.pre.rc.1</sass.version>
-		<jruby.version>9.1.7.0</jruby.version>
+		<jruby.version>9.1.8.0</jruby.version>
 		<maven-libs.version>3.3.9</maven-libs.version>
 		<scss-lint.version>0.52.0</scss-lint.version>
-		<bourbon.version>4.3.2</bourbon.version>
+		<bourbon.version>4.3.3</bourbon.version>
 		<maven.version />
 		<debug>true</debug>
 		<github.username />
