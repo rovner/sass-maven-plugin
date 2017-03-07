@@ -38,16 +38,35 @@ ${project.name} ${project.version} Release Notes
 
 ** Enhancements and Fixes
 
-  * Update Sass to version ${project.properties.get("sass.version")}, please check
-    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
-
-  * Update SCSS-Lint to version ${project.properties.get("scss-lint.version")}, please check
-    the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
-
   * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
     {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
-
+    
   * Update JRuby to ${project.properties.get("jruby.version")}
+  
+  []
+
+* 2.23 Release Notes
+
+
+  This release features Compass version 1.0.3, Bourbon version 4.3.2 and Sass version
+  3.4.23 running on JRuby 9.1.7.0.
+
+  A complete list of issues can be seen in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A$2.23+is%3Aclosed}milestone 2.23}}.
+
+
+** Enhancements and Fixes
+
+  * Update Sass to version 3.4.23, please check
+    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
+
+  * Update SCSS-Lint to version 0.52.0, please check
+    the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
+
+  * Update Bourbon to version 4.3.2, please check the
+    {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
+
+  * Update JRuby to 9.1.7.0
 
   * Update Maven plugins
 
