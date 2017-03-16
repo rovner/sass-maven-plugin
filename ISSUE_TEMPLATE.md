@@ -6,19 +6,6 @@ Please help us help you by providing the information below.
 Text inside XML comment  (such as this) tags will not be shown in your report, use the preview button above to check that.
 -->
 
-### Environment and configuration
-
-<!--
-Provide at least:
-* Maven version
-* Java version
-* Operating system and platform
-
-Running maven with the option `mvn --version ...` will provide this information
-
-* plugin configuration, the full/complete snippet of your pom.xml for the sass-maven-plugin
-* provide a debug log of your maven run using `mvn -X ...`
--->
 
 ### Expected Behavior
 
@@ -31,3 +18,23 @@ Describe your expectation of how the plugin should behave.
 <!--
 Describe or show the actual behavior.
 -->
+
+
+### Environment and configuration
+
+<!--
+Provide at least:
+* Maven version
+* Java version
+* Operating system and platform
+
+Running maven with the option `mvn --version ...` will provide this information
+
+* plugin configuration, the full and complete snippet of your pom.xml for the sass-maven-plugin and the actual command
+* provide a full debug log of your maven run using `mvn -X ...`
+  (wrap that in triple back-ticks for formatting:
+  ```
+  log
+  ```
+-->
+
