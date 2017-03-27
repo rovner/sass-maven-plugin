@@ -95,6 +95,9 @@ matrix:
       jdk: oraclejdk8
       env: VERSION=3.2.5
     - os: linux
+      jdk: oraclejdk8
+      env: VERSION=3.5.0-beta-1
+    - os: linux
       # Java 9 needs to be manually installed/updated
       # see: https://github.com/travis-ci/travis-ci/issues/2968#issuecomment-149164058
       jdk: oraclejdk9
