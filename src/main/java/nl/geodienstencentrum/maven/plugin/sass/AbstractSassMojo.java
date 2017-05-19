@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2016 Mark Prins, GeoDienstenCentrum.
+ * Copyright 2014-2017 Mark Prins, GeoDienstenCentrum.
  * Copyright 2010-2014 Jasig.
  *
  * See the NOTICE file distributed with this work for additional information
@@ -235,13 +235,14 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 
 		scriptingContainer.setHomeDirectory("uri:classloader://META-INF/jruby.home");
 		scriptingContainer.put("$compiler_callback", compilerCallback);
-		scriptingContainer.runScriptlet(sassScript);
+		Object o = scriptingContainer.runScriptlet(sassScript);
 
 		if (this.failOnError && compilerCallback.hadError()) {
 			throw new MojoFailureException(
 			   "Sass compilation encountered errors (see above for details).");
 		}
 		log.debug("\n");
+		scriptingContainer.terminate();
 	}
 
 	/**
