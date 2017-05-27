@@ -36,5 +36,7 @@ Running maven with the option `mvn --version ...` will provide this information
   ```
   log
   ```
+  
+  Do not use attachments!
 -->
 
