@@ -616,6 +616,7 @@
 					<failIfNoTests>true</failIfNoTests>
 					<excludes>
 						<exclude>**/*IntegrationTest.java</exclude>
+						<exclude>**/SCSSLint*.java</exclude>
 					</excludes>
 					<reuseForks>false</reuseForks>
 					<argLine>${surefireArgLine}</argLine>
