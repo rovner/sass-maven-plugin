@@ -36,11 +36,14 @@ ${project.name} ${project.version} Release Notes
 
 ~~   []
 
-~~** Enhancements and Fixes
+** Enhancements and Fixes
 
-~~   *
+  * Update JRuby to 9.1.12.0
 
-~~   []
+  * Update SCSS-Lint to version 0.54.0, please check
+    the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
+
+  []
 
 * 2.24 Release Notes
 
