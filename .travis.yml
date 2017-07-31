@@ -46,7 +46,8 @@ install:
 
 script:
   # execute unit and integration tests
-  - mvn -e -fae -B -Dfailsafe.useFile=false -T2 clean test verify
+  - mvn -e -fae -B -T2 clean test
+  - mvn -e -fae -B -Dfailsafe.useFile=false -T2 clean verify
   - if [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ] && [ "$VERSION" == "3.3.9" ]; then
          mvn javadoc:javadoc;
          mvn javadoc:test-javadoc;
@@ -78,7 +79,7 @@ os:
   - osx
 
 matrix:
-  fast_finish: true
+  fast_finish: false
   include:
     # additional builds
     - os: linux
