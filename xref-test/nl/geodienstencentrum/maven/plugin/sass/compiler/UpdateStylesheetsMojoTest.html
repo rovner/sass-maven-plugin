@@ -72,7 +72,7 @@
 <a class="jxr_linenumber" name="L64" href="#L64">64</a>  	@Test
 <a class="jxr_linenumber" name="L65" href="#L65">65</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testExecute() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="L66" href="#L66">66</a>  		<strong class="jxr_keyword">final</strong> File projectCopy = <strong class="jxr_keyword">this</strong>.resources
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  				.getBasedir(<span class="jxr_string">"maven-compass-test"</span>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>                  .getBasedir(<span class="jxr_string">"maven-sass-test"</span>);
 <a class="jxr_linenumber" name="L68" href="#L68">68</a>  		<strong class="jxr_keyword">final</strong> File pom = <strong class="jxr_keyword">new</strong> File(projectCopy, <span class="jxr_string">"pom.xml"</span>);
 <a class="jxr_linenumber" name="L69" href="#L69">69</a>  		assumeNotNull(<span class="jxr_string">"POM file should not be null."</span>, pom);
 <a class="jxr_linenumber" name="L70" href="#L70">70</a>  		assumeTrue(<span class="jxr_string">"POM file should exist as file."</span>,
@@ -86,12 +86,12 @@
 <a class="jxr_linenumber" name="L78" href="#L78">78</a>  		myMojo.execute();
 <a class="jxr_linenumber" name="L79" href="#L79">79</a>  		TestResources.assertDirectoryContents(
 <a class="jxr_linenumber" name="L80" href="#L80">80</a>  				<strong class="jxr_keyword">new</strong> File(projectCopy.getAbsolutePath()
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>  						+ <span class="jxr_string">"/target/maven-compass-test-1.0-SNAPSHOT/css/"</span>),
-<a class="jxr_linenumber" name="L82" href="#L82">82</a>  				<span class="jxr_string">"compiled.css.map"</span>, <span class="jxr_string">"compiled.css"</span>);
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>                          + <span class="jxr_string">"/target/maven-sass-test-1.0-SNAPSHOT/css/"</span>),
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>              				<span class="jxr_string">"compiled.css.map"</span>, <span class="jxr_string">"compiled.css"</span>);
 <a class="jxr_linenumber" name="L83" href="#L83">83</a>  		<em class="jxr_comment">// this may fail when line endings differ, eg. on Windows</em>
 <a class="jxr_linenumber" name="L84" href="#L84">84</a>  		<em class="jxr_comment">// set up git to check out with native file endings</em>
 <a class="jxr_linenumber" name="L85" href="#L85">85</a>  		TestResources.assertFileContents(projectCopy, <span class="jxr_string">"expected.css"</span>,
-<a class="jxr_linenumber" name="L86" href="#L86">86</a>  				<span class="jxr_string">"target/maven-compass-test-1.0-SNAPSHOT/css/compiled.css"</span>);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>                  <span class="jxr_string">"target/maven-sass-test-1.0-SNAPSHOT/css/compiled.css"</span>);
 <a class="jxr_linenumber" name="L87" href="#L87">87</a>  	}
 <a class="jxr_linenumber" name="L88" href="#L88">88</a>  
 <a class="jxr_linenumber" name="L89" href="#L89">89</a>  	<em class="jxr_javadoccomment">/**</em>
@@ -104,7 +104,7 @@
 <a class="jxr_linenumber" name="L96" href="#L96">96</a>  <em class="jxr_javadoccomment">	 * nl.geodienstencentrum.maven.plugin.sass.compiler.UpdateStylesheetsMojo#execute()</em>
 <a class="jxr_linenumber" name="L97" href="#L97">97</a>  <em class="jxr_javadoccomment">	 */</em>
 <a class="jxr_linenumber" name="L98" href="#L98">98</a>  	@Test
-<a class="jxr_linenumber" name="L99" href="#L99">99</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testExecute2() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testExecute_complete_test() <strong class="jxr_keyword">throws</strong> Exception {
 <a class="jxr_linenumber" name="L100" href="#L100">100</a> 		<strong class="jxr_keyword">final</strong> File projectCopy = <strong class="jxr_keyword">this</strong>.resources.getBasedir(<span class="jxr_string">"complete-test"</span>);
 <a class="jxr_linenumber" name="L101" href="#L101">101</a> 		<strong class="jxr_keyword">final</strong> File pom = <strong class="jxr_keyword">new</strong> File(projectCopy, <span class="jxr_string">"pom.xml"</span>);
 <a class="jxr_linenumber" name="L102" href="#L102">102</a> 		assertNotNull(<span class="jxr_string">"POM file should not be null."</span>, pom);
@@ -158,8 +158,8 @@
 <a class="jxr_linenumber" name="L150" href="#L150">150</a> 	}
 <a class="jxr_linenumber" name="L151" href="#L151">151</a> 
 <a class="jxr_linenumber" name="L152" href="#L152">152</a> 	@Test
-<a class="jxr_linenumber" name="L153" href="#L153">153</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCompassConfigFile() <strong class="jxr_keyword">throws</strong> Exception {
-<a class="jxr_linenumber" name="L154" href="#L154">154</a> 		<strong class="jxr_keyword">final</strong> File projectCopy = <strong class="jxr_keyword">this</strong>.resources.getBasedir(<span class="jxr_string">"maven-compass-configuration-file-test"</span>);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testSassSyntaxFile() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <strong class="jxr_keyword">final</strong> File projectCopy = <strong class="jxr_keyword">this</strong>.resources.getBasedir(<span class="jxr_string">"maven-sass-syntax-test"</span>);
 <a class="jxr_linenumber" name="L155" href="#L155">155</a> 		<strong class="jxr_keyword">final</strong> File pom = <strong class="jxr_keyword">new</strong> File(projectCopy, <span class="jxr_string">"pom.xml"</span>);
 <a class="jxr_linenumber" name="L156" href="#L156">156</a> 		assertTrue(<span class="jxr_string">"The POM file should exist as a file"</span>, pom.exists() &amp;&amp; pom.isFile());
 <a class="jxr_linenumber" name="L157" href="#L157">157</a> 
