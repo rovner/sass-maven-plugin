@@ -85,7 +85,7 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 
 	/**
 	 * Defines options for Sass::Plugin.options. See <a href=
-	 * "http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#options">Sass
+	 * "http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Options">Sass
 	 * options</a> If the value is a string it must by quoted in the maven
 	 * configuration: &lt;cache_location&gt;'/tmp/sass'&lt;/cache_location&gt;
 	 *
