@@ -140,9 +140,9 @@
 		<project.build.targetVersion>1.7</project.build.targetVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<sass.version>3.5.2</sass.version>
+		<sass.version>3.5.3</sass.version>
 		<jruby.version>9.1.13.0</jruby.version>
-		<maven-libs.version>3.5.0</maven-libs.version>
+		<maven-libs.version>3.5.2</maven-libs.version>
 		<scss-lint.version>0.55.0</scss-lint.version>
 		<bourbon.version>4.3.4</bourbon.version>
 		<maven.version />
@@ -237,7 +237,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.5</version>
+			<version>2.6</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven.plugin-testing</groupId>
@@ -353,7 +353,7 @@
 				<plugin>
 					<groupId>org.owasp</groupId>
 					<artifactId>dependency-check-maven</artifactId>
-					<version>3.0.0</version>
+					<version>3.0.1</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
