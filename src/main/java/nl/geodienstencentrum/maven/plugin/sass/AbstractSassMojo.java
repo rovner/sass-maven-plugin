@@ -197,6 +197,7 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 	 * the SCSS file. Allows, for example
 	 * "/media/skins/universality/coal/scss/portal.scss" to end up at
 	 * "/media/skins/universality/coal/portal.css" by specifying ".."
+	 * <strong>NB</strong>This location is relative to the source {@link #sassSourceDirectory}
 	 *
 	 * @since 2.0
 	 */
