@@ -963,9 +963,17 @@
 					</plugin>
 					<plugin>
 						<artifactId>maven-gpg-plugin</artifactId>
+						<!-- also you may need to
+								GPG_TTY=$(tty)
+								export GPG_TTY
+						-->
 						<configuration>
 							<executable>gpg2</executable>
+							<gpgArguments>
+								<arg>--verbose</arg>
+							</gpgArguments>
 						</configuration>
+						<executions>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
