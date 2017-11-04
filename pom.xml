@@ -963,6 +963,9 @@
 					</plugin>
 					<plugin>
 						<artifactId>maven-gpg-plugin</artifactId>
+						<configuration>
+							<executable>gpg2</executable>
+						</configuration>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>

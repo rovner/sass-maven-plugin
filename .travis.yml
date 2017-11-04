@@ -96,9 +96,6 @@ matrix:
       env: VERSION=3.2.5
     - os: linux
       jdk: oraclejdk8
-      env: VERSION=3.5.0
-    - os: linux
-      jdk: oraclejdk8
       env: VERSION=3.5.2
     - os: linux
       # Java 9 needs to be manually installed/updated
@@ -118,7 +115,7 @@ matrix:
   allow_failures:
 #   - env: JVM=latest
 #   - os: osx
-   - jdk: oraclejdk9
+#   - jdk: oraclejdk9
 #   - jdk: openjdk8
 #   - env: JVM=latest
 #   - env: JAVA_HOME=/usr/lib/jvm/java-7-oracle
