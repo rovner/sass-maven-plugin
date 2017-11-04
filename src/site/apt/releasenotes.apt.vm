@@ -29,7 +29,18 @@ ${project.name} ${project.version} Release Notes
   Please check the {{{/${project.artifactId}/dependencies.html#provided}full dependencies}}
   to find out about the specific Sass and other transitive dependencies included in this release.
 
-  <<NOTE>> SCSS linting is currently broken, we are waiting for a <<<scss_lint>>> release that supports Sass 3.5.x, 
+  <<NOTE>> SCSS linting is currently broken, we are waiting for a <<<scss_lint>>> release that supports Sass 3.5.x,
+  see {{{https://github.com/brigade/scss-lint/issues/877}scss-lint #877}}
+
+
+* 3.5-RC1 Release Notes
+
+  This release features Bourbon version 4.3.4 and Sass version 3.5.3 running on JRuby 9.1.13.0.
+
+  A complete list of issues can be seen in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A$3.5-RC1+is%3Aclosed}milestone 3.5-RC1}}.
+
+  <<NOTE>> SCSS linting is currently broken, we are waiting for a <<<scss_lint>>> release that supports Sass 3.5.x,
   see {{{https://github.com/brigade/scss-lint/issues/877}scss-lint #877}}
 
 ** New
@@ -40,16 +51,16 @@ ${project.name} ${project.version} Release Notes
 
 ** Enhancements and Fixes
 
-  * Update Sass to version ${project.properties.get("sass.version")}, please check
+  * Update Sass to version 3.5.3, please check
     the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
 
-  * Update SCSS-Lint to version ${project.properties.get("scss-lint.version")}, please check
+  * Update SCSS-Lint to version 0.55.0, please check
     the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
 
-  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
+  * Update Bourbon to version 4.3.4, please check the
     {{{https://github.com/thoughtbot/bourbon/releases}Bourbon changelog}}
 
-  * Update JRuby to ${project.properties.get("jruby.version")}
+  * Update JRuby to 9.1.13.0
 
   []
 
@@ -408,169 +419,6 @@ ${project.name} ${project.version} Release Notes
   * Update JRuby to 9.0.0.0
 
   []
-
-* 2.8 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.8+is%3Aclosed}milestone 2.8}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.15 running on JRuby 1.7.21.
-
-** New
-
-  * More elegant way of handling faulty resources {{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/57}#57}}
-
-  []
-
-** Enhancements
-
-  * Update SCSS-Lint to version ${project.properties.get("scss-lint.version")}, please check
-    the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
-
-  * Update JRuby to ${project.properties.get("jruby.version")}
-
-  []
-
-* 2.7 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.7+is%3Aclosed}milestone 2.7}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.15 running on JRuby 1.7.20.1.
-
-** New
-
-  * Add a {{{/${project.artifactId}/faq.html}FAQ}} describing a Windows issue workaround
-
-  []
-
-
-** Enhancements
-
-  * Update Sass to version 3.4.15, please check
-    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html#3415_22_june_2015}Sass changelog}}
-
-  * Update JRuby dependency to 1.7.20.1 (security fix)
-
-  []
-
-* 2.6 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.6+is%3Aclosed}milestone 2.6}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.14 running on JRuby 1.7.20.
-
-** Enhancements
-
-  * Update Maven libraries to 3.3.3 and start using Maven 3.3.3 in builds
-
-  * Update SCSS-Lint to version 0.39.0
-
-  * Update Sass to version 3.4.14
-
-  * Update JRuby to 1.7.20
-
-  []
-
-* 2.5 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.5+is%3Aclosed}milestone 2.5}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.13 running on JRuby 1.7.19.
-
-** New
-
-  * Add an optional parameter to specify a <<<compass.rb>>> file
-
-  []
-
-** Enhancements
-
-  * Update maven libraries to 3.3.1 and start using Maven 3.3.1 in builds
-
-  * Update SCSS-Lint to version 0.37.0
-
-  []
-
-
-* 2.4 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.4+is%3Aclosed}milestone 2.4}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.13 running on JRuby 1.7.19.
-
-** Fix
-
-  * Use the latest version of the ffi gems which had serious bugs in the last release
-
-  []
-
-** Enhancements
-
-  * Update SCSS-Lint to version 0.35.0
-
-  []
-
-* 2.3 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.3+is%3Aclosed}milestone 2.3}}.
-
-  This release features Compass version 1.0.3 and Sass version 3.4.13 running on JRuby 1.7.19.
-
-** New
-
-  * Add {{{https://github.com/causes/scss-lint}SCSS-Lint}} based linting and reporting. Enhance your QC now!
-
-  []
-
-** Enhancements
-
-  * Update Sass to version 3.4.13
-
-  []
-
-
-* 2.2 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.2+is%3Aclosed}milestone 2.2}}.
-
-  This release features Compass version 1.0.3 running on JRuby 1.7.19.
-
-** Enhancements
-
-  * update JRuby to latest release (1.7.19)
-
-  * update Compass (1.0.3) and Sass (3.4.12) to latest release
-
-  []
-
-
-* 2.1 Release Notes
-
-  A complete list of issues can be seen in the tracker
-  {{{${project.issueManagement.url}?q=milestone%3A2.1+is%3Aclosed}milestone 2.1}}.
-
-  This release features Compass version 1.0.3 running on JRuby 1.7.18.
-
-** Enhancements
-
-  * update JRuby to latest release (1.7.18)
-
-  * update Compass (1.0.3) and Sass to latest release
-
-  []
-
-** New
-
-  * enable setting the ruby version from the pom
-
-  []
-
 
 
 * Archives
