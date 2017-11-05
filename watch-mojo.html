@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Date-Revision-yyyymmdd" content="20171105" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>Sass Compiler Plugin 3.5.0 &#x2013; sass:watch</title>
+    <title>Sass Compiler Plugin 3.5.1-SNAPSHOT &#x2013; sass:watch</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.6.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -31,7 +31,7 @@
         <ul class="breadcrumb">
         <li id="publishDate">Last Published: 05-November-2017<span class="divider">|</span>
 </li>
-          <li id="projectVersion">Version: 3.5.0</li>
+          <li id="projectVersion">Version: 3.5.1-SNAPSHOT</li>
       <li class="pull-right"><a href="https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/" class="externalLink" title="Issues dashboard">Issues dashboard</a></li>
         </ul>
       </div>
@@ -74,7 +74,7 @@
       
 <p><b>Full name</b>:</p>
       
-<p>nl.geodienstencentrum.maven:sass-maven-plugin:3.5.0:watch</p>
+<p>nl.geodienstencentrum.maven:sass-maven-plugin:3.5.1-SNAPSHOT:watch</p>
       
 <p><b>Description</b>:</p>
       
@@ -110,7 +110,7 @@ process.</div>
             
 <td><tt>File</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Build directory for the plugin.<br /><b>Default value is</b>: <tt>${project.build.directory}</tt>.<br /></td>
           </tr>
@@ -121,7 +121,7 @@ process.</div>
             
 <td><tt>File</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Where to put the compiled CSS files.<br /><b>Default value is</b>: <tt>${project.build.directory}/${project.build.finalName}/css</tt>.<br /></td>
           </tr>
@@ -132,7 +132,7 @@ process.</div>
             
 <td><tt>String[]</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines which of the included files in the source directories to
 exclude (none by default).<br /></td>
@@ -144,7 +144,7 @@ exclude (none by default).<br /></td>
             
 <td><tt>boolean</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Fail the build if errors occur during compilation of sass/scss
 templates.<br /><b>Default value is</b>: <tt>true</tt>.<br /></td>
@@ -156,7 +156,7 @@ templates.<br /><b>Default value is</b>: <tt>true</tt>.<br /></td>
             
 <td><tt>String[]</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines paths where jruby will look for gems. E.g. a maven build
 could download gems into ${project.build.directory}/rubygems and a
@@ -170,7 +170,7 @@ loaded via the &lt;gems&gt; configuration.<br /><b>Default value is</b>: <tt>${p
             
 <td><tt>String[]</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines gems to be loaded before Sass. This is useful to add gems
 with custom Sass functions or stylesheets. Gems that hook into Sass
@@ -183,7 +183,7 @@ with custom Sass functions or stylesheets. Gems that hook into Sass
             
 <td><tt>String[]</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines files in the source directories to include. Defaults to:
 <tt>**&amp;#x0002F;*.scss</tt><br /></td>
@@ -195,7 +195,7 @@ with custom Sass functions or stylesheets. Gems that hook into Sass
             
 <td><tt>String</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines an additional path section when calculating the destination
 for the SCSS file. Allows, for example
@@ -211,7 +211,7 @@ for the SCSS file. Allows, for example
             
 <td><tt>List</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Sources for compilation with their destination directory containing
 Sass files. Allows for multiple resource sources and destinations.
@@ -243,7 +243,7 @@ Example configuration:
             
 <td><tt>Map</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Defines options for Sass::Plugin.options. See <a class="externalLink" href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Options">Sass
 options</a> If the value is a string it must by quoted in the maven
@@ -267,7 +267,7 @@ options are set the default configuration set is used which is:
             
 <td><tt>File</tt></td>
             
-<td><tt>2.0</tt></td>
+<td><tt>-</tt></td>
             
 <td>Directory containing Sass files, defaults to the Maven sources
 directory (${basedir}/src/main/sass).<br /><b>Default value is</b>: <tt>${basedir}/src/main/sass</tt>.<br /><b>User property is</b>: <tt>sassSourceDirectory</tt>.<br /></td>
@@ -279,7 +279,7 @@ directory (${basedir}/src/main/sass).<br /><b>Default value is</b>: <tt>${basedi
             
 <td><tt>boolean</tt></td>
             
-<td><tt>2.10</tt></td>
+<td><tt>-</tt></td>
             
 <td>skip execution.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
           </tr>
@@ -290,7 +290,7 @@ directory (${basedir}/src/main/sass).<br /><b>Default value is</b>: <tt>${basedi
             
 <td><tt>boolean</tt></td>
             
-<td><tt>2.11</tt></td>
+<td><tt>-</tt></td>
             
 <td>Enable the use of Bourbon style library mixins.<br /><b>Default value is</b>: <tt>false</tt>.<br /></td>
           </tr>
@@ -308,8 +308,6 @@ directory (${basedir}/src/main/sass).<br /><b>Default value is</b>: <tt>${basedi
           
 <li><b>Type</b>: <tt>java.io.File</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
           
 <li><b>Default</b>: <tt>${project.build.directory}</tt></li>
@@ -321,8 +319,6 @@ directory (${basedir}/src/main/sass).<br /><b>Default value is</b>: <tt>${basedi
 <ul>
           
 <li><b>Type</b>: <tt>java.io.File</tt></li>
-          
-<li><b>Since</b>: <tt>2.0</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
           
@@ -337,8 +333,6 @@ exclude (none by default).</div>
           
 <li><b>Type</b>: <tt>java.lang.String[]</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
         </ul><hr />
 <p><b><a name="failOnError">failOnError</a>:</b></p>
@@ -349,8 +343,6 @@ templates.</div>
 <ul>
           
 <li><b>Type</b>: <tt>boolean</tt></li>
-          
-<li><b>Since</b>: <tt>2.0</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
           
@@ -367,8 +359,6 @@ loaded via the &lt;gems&gt; configuration.</div>
           
 <li><b>Type</b>: <tt>java.lang.String[]</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
           
 <li><b>Default</b>: <tt>${project.build.directory}/rubygems</tt></li>
@@ -383,8 +373,6 @@ with custom Sass functions or stylesheets. Gems that hook into Sass
           
 <li><b>Type</b>: <tt>java.lang.String[]</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
         </ul><hr />
 <p><b><a name="includes">includes</a>:</b></p>
@@ -395,8 +383,6 @@ with custom Sass functions or stylesheets. Gems that hook into Sass
 <ul>
           
 <li><b>Type</b>: <tt>java.lang.String[]</tt></li>
-          
-<li><b>Since</b>: <tt>2.0</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
         </ul><hr />
@@ -412,8 +398,6 @@ for the SCSS file. Allows, for example
 <ul>
           
 <li><b>Type</b>: <tt>java.lang.String</tt></li>
-          
-<li><b>Since</b>: <tt>2.0</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
           
@@ -448,8 +432,6 @@ Example configuration:
           
 <li><b>Type</b>: <tt>java.util.List</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
         </ul><hr />
 <p><b><a name="sassOptions">sassOptions</a>:</b></p>
@@ -473,8 +455,6 @@ options are set the default configuration set is used which is:
           
 <li><b>Type</b>: <tt>java.util.Map</tt></li>
           
-<li><b>Since</b>: <tt>2.0</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
         </ul><hr />
 <p><b><a name="sassSourceDirectory">sassSourceDirectory</a>:</b></p>
@@ -485,8 +465,6 @@ directory (${basedir}/src/main/sass).</div>
 <ul>
           
 <li><b>Type</b>: <tt>java.io.File</tt></li>
-          
-<li><b>Since</b>: <tt>2.0</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
           
@@ -502,8 +480,6 @@ directory (${basedir}/src/main/sass).</div>
           
 <li><b>Type</b>: <tt>boolean</tt></li>
           
-<li><b>Since</b>: <tt>2.10</tt></li>
-          
 <li><b>Required</b>: <tt>No</tt></li>
           
 <li><b>Default</b>: <tt>false</tt></li>
@@ -515,8 +491,6 @@ directory (${basedir}/src/main/sass).</div>
 <ul>
           
 <li><b>Type</b>: <tt>boolean</tt></li>
-          
-<li><b>Since</b>: <tt>2.11</tt></li>
           
 <li><b>Required</b>: <tt>No</tt></li>
           
