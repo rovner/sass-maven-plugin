@@ -31,6 +31,28 @@ ${project.name} ${project.version} Release Notes
 
 ** New
 
+   * ...
+   
+   [] 
+
+** Enhancements and Fixes
+
+  * ...
+
+  []
+
+
+
+* 3.5.0 Release Notes
+
+  This release features Bourbon version 4.3.4 and Sass version 3.5.3 running on JRuby 9.1.13.0.
+
+  A complete list of issues can be seen in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A$3.5.0+is%3Aclosed}milestone 3.5.0}} and
+  {{{${project.issueManagement.url}?q=milestone%3A$3.5-RC1+is%3Aclosed}milestone 3.5-RC1}}.
+
+** New
+
    * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
 
    []

@@ -91,14 +91,14 @@ mvn -Prelease release:perform
   <<<Unhandled: Missing staging repository: nlgeodienstencentrum-...>>>
   because we're deploying straight away.
 
-  Then (optionally) deploy the site to github:
+  Then deploy the site to github:
 
 +----+
 cd target/checkout
 mvn site-deploy
 +----+
 
-  Update and push the release notes to reflect the new release cycle.
+  Cleanup.
 
 +----+
 cd ../..
