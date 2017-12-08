@@ -141,7 +141,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sass.version>3.5.3</sass.version>
-		<jruby.version>9.1.14.0</jruby.version>
+		<jruby.version>9.1.15.0</jruby.version>
 		<maven-libs.version>3.5.2</maven-libs.version>
 		<scss-lint.version>0.56.0</scss-lint.version>
 		<bourbon.version>4.3.4</bourbon.version>
@@ -348,7 +348,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>3.0.0-M1</version>
+					<version>3.0.0</version>
 				</plugin>
 				<plugin>
 					<groupId>org.owasp</groupId>
