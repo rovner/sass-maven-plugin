@@ -31,19 +31,34 @@ ${project.name} ${project.version} Release Notes
 
 ** New
 
-   * ...
-   
-   [] 
+  * ...
+  
+  [] 
 
 ** Enhancements and Fixes
 
-  * Update JRuby to ${project.properties.get("jruby.version")}
+~~  * Update JRuby to ${project.properties.get("jruby.version")}
 
-  * Update Sass to version ${project.properties.get("sass.version")}, please check
+~~  * Update Sass to version ${project.properties.get("sass.version")}, please check
+~~    the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
+~~    
+~~  []
+
+* 3.5.1 Release Notes
+
+  This release features Bourbon version 4.3.4 and Sass version 3.5.4 running on JRuby 9.1.15.0.
+
+  A complete list of issues can be seen in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A$3.5.1+is%3Aclosed}milestone 3.5.1}}.
+  
+** Enhancements and Fixes
+
+  * Update Sass to version 3.5.4, please check
     the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
-    
-  []
 
+  * Update JRuby to 9.1.15.0
+
+  []
 
 
 * 3.5.0 Release Notes
@@ -56,9 +71,9 @@ ${project.name} ${project.version} Release Notes
 
 ** New
 
-   * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
+  * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
 
-   []
+  []
 
 ** Enhancements and Fixes
 
@@ -88,9 +103,9 @@ ${project.name} ${project.version} Release Notes
 
 ** New
 
-   * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
+  * Drop Compass support ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/77}#77}})
 
-   []
+  []
 
 ** Enhancements and Fixes
 
@@ -108,6 +123,6 @@ ${project.name} ${project.version} Release Notes
   []
 
 
-* Archives
+* Archives of old release notes
 
-  There are more releases (1.x and 2.x versions) in the {{{./oldreleasenotes.html}archive}}.
+  There are more release notes (1.x and 2.x versions) in the {{{./oldreleasenotes.html}archive}}.
