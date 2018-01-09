@@ -59,6 +59,9 @@ import nl.geodienstencentrum.maven.plugin.sass.compiler.CompilerCallback;
  */
 public abstract class AbstractSassMojo extends AbstractMojo {
 
+	private static final String BOURBON_GEM_PATH = "core";
+	private static final String BOURBON_DEST_PATH = "bourbon";
+
 	/**
 	 * Build directory for the plugin.
 	 *
@@ -274,7 +277,7 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 			/* remove trailing comma+\n */
 			sassScript.setLength(sassScript.length() - 2);
 			// TODO
-			// quick fix for the deprecation message coming from Gem.paths, this should be cleaned up; 
+			// quick fix for the deprecation message coming from Gem.paths, this should be cleaned up;
 			// there's a round trip of splitting into array in java and then unsplitting the array in ruby...
 			// see #118
 			sassScript.append("\n].uniq.join(File::PATH_SEPARATOR) }\n");
@@ -338,12 +341,11 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 
 		if (this.useBourbon) {
 			log.info("Running with Bourbon enabled.");
-			final String bDest = this.buildDirectory + "/bourbon";
+			final String bDest = this.buildDirectory + "/bourbon-lib";
 			this.extractBourbonResources(bDest);
-			// sassScript.append("require 'bourbon'\n");
 			sassScript.append("Sass::Plugin.add_template_location('")
                     .append(bDest)
-                    .append("/app/assets/stylesheets', '")
+                    .append("', '")
                     .append(destination).append("')\n");
 		}
 
@@ -440,21 +442,23 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 			File jarFile = new File(new URI(jarFileURI));
 			JarFile jar = new JarFile(jarFile);
 
-			// extract app/assets/stylesheets to destinationDir
+			// extract bourbon to destinationDir
 			for (Enumeration<JarEntry> enums = jar.entries(); enums.hasMoreElements();) {
 				JarEntry entry = enums.nextElement();
 
-				if (entry.getName().contains("app/assets/stylesheets")) {
+				if (entry.getName().contains(BOURBON_GEM_PATH) || entry.getName().contains("_bourbon.scss")) {
 					// shorten the path a bit
-					index = entry.getName().indexOf("app/assets/stylesheets");
+					index = entry.getName().indexOf(BOURBON_GEM_PATH);
 					String fileName = destinationDir + File.separator + entry.getName().substring(index);
 
-					File f = new File(fileName);
+					File f = new File(fileName.replace(BOURBON_GEM_PATH,BOURBON_DEST_PATH));
 					if (fileName.endsWith("/")) {
+						log.debug("create Bourbon directory: " + f);
 						f.mkdirs();
 					} else {
 						FileOutputStream fos = new FileOutputStream(f);
 						try {
+							// log.debug("  extract Bourbon file " + entry.getName() + " to " + f);
 							IOUtil.copy(jar.getInputStream(entry), fos);
 						} finally {
 							IOUtil.close(fos);
