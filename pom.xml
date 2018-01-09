@@ -144,7 +144,7 @@
 		<jruby.version>9.1.15.0</jruby.version>
 		<maven-libs.version>3.5.2</maven-libs.version>
 		<scss-lint.version>0.56.0</scss-lint.version>
-		<bourbon.version>4.3.4</bourbon.version>
+		<bourbon.version>5.0.0</bourbon.version>
 		<maven.version />
 		<debug>true</debug>
 		<github.username />
