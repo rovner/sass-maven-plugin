@@ -302,6 +302,10 @@
 					<exclude>**/test/**</exclude>
 					<exclude>**/examples/**</exclude>
 					<exclude>**/src/**</exclude>
+					<exclude>.github/**</exclude>
+					<exclude>**/*.json</exclude>
+					<exclude>**/*.md</exclude>
+					<exclude>**/*.js</exclude>
 				</excludes>
 			</resource>
 			<resource>
