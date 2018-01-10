@@ -54,7 +54,7 @@ public class WatchMojo extends AbstractSassMojo {
 		final StringBuilder sassBuilder = new StringBuilder();
 		this.buildBasicSassScript(sassBuilder);
 		if (IS_WINDOWS) {
-			sassBuilder.append("require 'listen'\nSass::Plugin.options.merge!(:poll => true)\n");
+			sassBuilder.append("require 'sass-listen'\nSass::Plugin.options.merge!(:poll => true)\n");
 		}
 		sassBuilder.append("Sass::Plugin.watch");
 		final String sassScript = sassBuilder.toString();
