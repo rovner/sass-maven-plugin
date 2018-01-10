@@ -605,7 +605,7 @@
 					<failIfNoTests>true</failIfNoTests>
 					<excludes>
 						<exclude>**/*IntegrationTest.java</exclude>
-						<exclude>**/WatchMojoTest.java</exclude>
+						<!--<exclude>**/WatchMojoTest.java</exclude>-->
 					</excludes>
 					<reuseForks>false</reuseForks>
 					<argLine>${surefireArgLine}</argLine>
