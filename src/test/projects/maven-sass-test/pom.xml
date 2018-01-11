@@ -47,6 +47,7 @@
 						<always_update>true</always_update>
 						<style>:expanded</style>
 						<debug_info>false</debug_info>
+						<poll>true</poll>
 					</sassOptions>
 				</configuration>
 			</plugin>
