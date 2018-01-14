@@ -1,6 +1,24 @@
-@import "bourbon";
+@import "bourbon/bourbon";
 
-@include font-face("Helvetica", "/fonts");
-@include font-face("Verdana", "/assets/fonts", "bold", "italic");
-@include font-face("Georgia", "/assets", "normal", "normal", false);
-@include font-face("Arial", "/", "normal", "normal", false, woff2 svg);
+
+@include font-face(
+  "Helvetica",
+  "/fonts"
+);
+
+@include font-face(
+  "Verdana",
+  "/assets/fonts"
+) {
+  font-weight: bold;
+  font-style: italic;
+};
+
+@include font-face(
+  "Arial",
+  "/",
+  ("woff2", "svg")
+) {
+  font-weight: normal;
+  font-style: normal;
+};
