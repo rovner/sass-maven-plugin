@@ -87,27 +87,21 @@ matrix:
       jdk: openjdk7
     - os: linux
       jdk: openjdk8
-      #sudo: required
-      #dist: trusty
-      #group: edge
     - os: linux
       jdk: oraclejdk8
       env: VERSION=3.3.9
     - os: linux
       jdk: oraclejdk8
       env: VERSION=3.2.5
-    - os: linux
-      jdk: oraclejdk8
-      env: VERSION=3.5.2
+ # skip this as it is the current travis-ci linux setup
+ #   - os: linux
+ #     jdk: oraclejdk8
+ #     env: VERSION=3.5.2
     - os: linux
       jdk: oraclejdk9
-      #env: JVM=latest
-      #sudo: required
-      #dist: trusty
-      #group: edge
     - os: osx
       env: JVM=latest
-# these are the current Travis default JDKs on linux/osx
+# skip this as it is the current travis-ci osx setup
 #    - os: osx
 #      env: JAVA_HOME=/usr/libexec/java_home
   allow_failures:
