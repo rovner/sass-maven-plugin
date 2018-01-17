@@ -46,7 +46,7 @@ install:
 script:
   - unset GEM_PATH
   # execute unit and integration tests
-  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false -Dorg.slf4j.simpleLogger.showDateTime=true clean test verify
+  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false clean test verify -Dtest="*,!WatchMojoTest" -Dorg.slf4j.simpleLogger.showDateTime=true
   - if [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ] && [ "$VERSION" == "3.5.2" ]; then
          mvn javadoc:javadoc;
          mvn javadoc:test-javadoc;
