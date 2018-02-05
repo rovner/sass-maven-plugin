@@ -4,7 +4,7 @@ sudo: false
 
 env:
   global:
-    - BASEURL=https://www-eu.apache.org/dist/maven/maven-3/VERSION/binaries/apache-maven-VERSION-bin.zip
+    - BASEURL=https://archive.apache.org/dist/maven/maven-3/VERSION/binaries/apache-maven-VERSION-bin.zip
     - FILE=apache-maven-VERSION-bin.zip
     - DIR=apache-maven-VERSION
     - VERSION=3.5.2
@@ -89,10 +89,13 @@ matrix:
       jdk: openjdk8
     - os: linux
       jdk: oraclejdk8
+      env: VERSION=3.2.5
+    - os: linux
+      jdk: oraclejdk8
       env: VERSION=3.3.9
     - os: linux
       jdk: oraclejdk8
-      env: VERSION=3.2.5
+      env: VERSION=3.5.0
  # skip this as it is the current travis-ci linux setup
  #   - os: linux
  #     jdk: oraclejdk8
