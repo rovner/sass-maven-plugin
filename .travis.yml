@@ -41,12 +41,12 @@ before_install:
 
 install:
   # install without any testing to get dependencies in place
-  - mvn install -Dmaven.test.skip=true -B -V -fae -T2
+  - mvn install -Dmaven.test.skip=true -B -V -fae -T2 -Dorg.slf4j.simpleLogger.showDateTime=true
 
 script:
   - unset GEM_PATH
   # execute unit and integration tests
-  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false clean test verify
+  - mvn -e -fae -B -DWatchMojoTestSleeptime=90000 -Dfailsafe.useFile=false -Dorg.slf4j.simpleLogger.showDateTime=true clean test verify
   - if [ "$TRAVIS_JDK_VERSION" == oraclejdk8 ] && [ "$VERSION" == "3.5.2" ]; then
          mvn javadoc:javadoc;
          mvn javadoc:test-javadoc;
