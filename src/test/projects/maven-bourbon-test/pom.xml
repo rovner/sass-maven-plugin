@@ -39,7 +39,7 @@
 						<phase>process-sources</phase>
 						<goals>
 							<goal>update-stylesheets</goal>
-							<!-- goal>scss-lint</goal -->
+							<goal>scss-lint</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -71,11 +71,11 @@
 				<version>3.4</version>
 				<configuration>
 					<reportPlugins>
-						<!-- plugin>
+						<plugin>
 							<groupId>nl.geodienstencentrum.maven</groupId>
 							<artifactId>sass-maven-plugin</artifactId>
 							<version>@project.version@</version>
-						</plugin -->
+						</plugin>
 					</reportPlugins>
 				</configuration>
 			</plugin>
