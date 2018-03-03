@@ -3,6 +3,16 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
 		title="Frequently Asked Questions" toplink="true">
+<part id="config">
+	<title>Configuration</title>
+	<faq id="inexclude">
+		<question>Why does the inclusion / exclusion of files not work for compilation?</question>
+		<answer>
+			<p>Sass works at the directory level, so this is not supported. You can work around
+				this by using multiple templates.</p>
+		</answer>
+	</faq>
+</part>
 <part id="snapshots">
 	<title>Snapshots</title>
 	<faq id="snapshot">
