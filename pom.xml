@@ -142,7 +142,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sass.version>3.5.5</sass.version>
 		<jruby.version>9.1.16.0</jruby.version>
-		<maven-libs.version>3.5.2</maven-libs.version>
+		<maven-libs.version>3.5.3</maven-libs.version>
 		<scss-lint.version>0.57.0</scss-lint.version>
 		<bourbon.version>5.0.0</bourbon.version>
 		<maven.version />
