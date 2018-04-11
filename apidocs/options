@@ -15,7 +15,7 @@
 -docencoding
 'UTF-8'
 -doctitle
-'Sass Compiler Plugin 3.5.3-SNAPSHOT API'
+'Sass Compiler Plugin 3.5.3 API'
 -link
 'https://maven.apache.org/ref/3.5.3/maven-core/apidocs'
 -link
@@ -30,8 +30,6 @@
 'http://maven.apache.org/shared/maven-verifier/apidocs'
 -link
 'http://maven.apache.org/doxia/doxia/doxia-sink-api/apidocs'
--link
-'https://maven.apache.org/shared/maven-reporting-impl/apidocs'
 -linkoffline
 'https://docs.oracle.com/javase/7/docs/api' '/home/mprins/workspace/sass-maven-plugin/target/javadoc-bundle-options'
 -packagesheader
@@ -41,4 +39,4 @@
 -use
 -version
 -windowtitle
-'Sass Compiler Plugin 3.5.3-SNAPSHOT API'
+'Sass Compiler Plugin 3.5.3 API'
