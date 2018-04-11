@@ -35,7 +35,7 @@ ${project.name} ${project.version} Release Notes
 ~~   
 ~~   [] 
  
- ** Enhancements and Fixes
+** Enhancements and Fixes
  
 ~~   * Update JRuby to ${project.properties.get("jruby.version")}
 ~~ 
@@ -44,9 +44,11 @@ ${project.name} ${project.version} Release Notes
 ~~     
 ~~   * Update SCSS-Lint to version 0.57.0, please check
 ~~     the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
-~~ 
+~
    * Update Sass to version ${project.properties.get("sass.version")}, please check
      the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
+     Note that Ruby Sass has now been deprecated, read the
+     {{{http://sass.logdown.com/posts/7081811}blogpost:Ruby Sass is Deprecated}}.
     
   []
 

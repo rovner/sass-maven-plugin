@@ -46,7 +46,7 @@ mvn install -Dmaven.test.skip=true
   Use the following command sequence to do a full build:
 
 +----+
-mvn clean install -Dmaven.test.skip=true -B -V -fae -q -T2
+mvn clean install -Dmaven.test.skip=true -B -V -fae -q
 mvn -e verify -B
 +----+
 
