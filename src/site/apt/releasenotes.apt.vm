@@ -37,7 +37,7 @@ ${project.name} ${project.version} Release Notes
  
 ** Enhancements and Fixes
  
-   * Update JRuby to ${project.properties.get("jruby.version")}
+   * Update JRuby to ${project.properties.get("jruby.version")}, this plugin now requires Java 8
  
 ~~  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
 ~~     {{{https://github.com/thoughtbot/bourbon/blob/master/CHANGELOG.md}Bourbon changelog}}
