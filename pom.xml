@@ -136,8 +136,8 @@
 		</repository>
 	</distributionManagement>
 	<properties>
-		<project.build.sourceVersion>1.7</project.build.sourceVersion>
-		<project.build.targetVersion>1.7</project.build.targetVersion>
+		<project.build.sourceVersion>1.8</project.build.sourceVersion>
+		<project.build.targetVersion>1.8</project.build.targetVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<sass.version>3.5.6</sass.version>
@@ -184,11 +184,11 @@
 			<scope>provided</scope>
 			<type>gem</type>
 			<exclusions>
+				<!-- we don't use this 
 				<exclusion>
-					<!-- we don't use this -->
 					<groupId>rubygems</groupId>
 					<artifactId>rake</artifactId>
-				</exclusion>
+				</exclusion> -->
 				<exclusion>
 					<!-- override -->
 					<groupId>rubygems</groupId>
