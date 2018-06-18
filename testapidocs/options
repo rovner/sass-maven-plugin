@@ -25,6 +25,8 @@
 -link
 'http://maven.apache.org/plugin-testing/maven-plugin-testing-harness/apidocs'
 -link
+'https://maven.apache.org/ref/3.5.3/maven-compat/apidocs'
+-link
 'http://maven.apache.org/shared/maven-verifier/apidocs'
 -link
 'http://maven.apache.org/doxia/doxia/doxia-sink-api/apidocs'

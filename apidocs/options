@@ -17,13 +17,21 @@
 -doctitle
 'Sass Compiler Plugin 3.5.5-SNAPSHOT API'
 -link
+'https://maven.apache.org/ref/3.5.3/maven-core/apidocs'
+-link
+'https://maven.apache.org/plugin-tools/maven-plugin-annotations/apidocs'
+-link
 'http://commons.apache.org/proper/commons-io/apidocs'
 -link
 'http://maven.apache.org/plugin-testing/maven-plugin-testing-harness/apidocs'
 -link
+'https://maven.apache.org/ref/3.5.3/maven-compat/apidocs'
+-link
 'http://maven.apache.org/shared/maven-verifier/apidocs'
 -link
 'http://maven.apache.org/doxia/doxia/doxia-sink-api/apidocs'
+-link
+'https://maven.apache.org/shared/maven-reporting-impl/apidocs'
 -linkoffline
 'https://docs.oracle.com/javase/8/docs/api' '/home/travis/build/GeoDienstenCentrum/sass-maven-plugin/target/javadoc-bundle-options'
 -packagesheader
