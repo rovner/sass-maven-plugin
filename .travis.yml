@@ -102,6 +102,9 @@ matrix:
       jdk: oraclejdk8
       env: VERSION=3.5.3
     - os: linux
+      jdk: oraclejdk8
+      env: VERSION=3.5.4
+    - os: linux
       jdk: oraclejdk9
     - os: osx
       env: JVM=latest
