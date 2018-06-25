@@ -50,6 +50,8 @@ ${project.name} ${project.version} Release Notes
 ~~     Note that Ruby Sass has now been deprecated, read the
 ~~     {{{http://sass.logdown.com/posts/7081811}blogpost:Ruby Sass is Deprecated}}.
 
+  * Update Maven dependencies to version 4.5.4
+
   []
 
 * 3.5.4 Release Notes
