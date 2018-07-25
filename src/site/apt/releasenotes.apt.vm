@@ -39,21 +39,40 @@ ${project.name} ${project.version} Release Notes
  
 ~~   * Update JRuby to ${project.properties.get("jruby.version")}, this plugin now requires Java 8
 ~~ 
-  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
-     {{{https://github.com/thoughtbot/bourbon/blob/master/CHANGELOG.md}Bourbon changelog}}
-     
+~~  * Update Bourbon to version ${project.properties.get("bourbon.version")}, please check the
+~~     {{{https://github.com/thoughtbot/bourbon/blob/master/CHANGELOG.md}Bourbon changelog}}
+~~
 ~~  * Update SCSS-Lint to version 0.57.0, please check
 ~~     the {{{https://github.com/brigade/scss-lint/blob/master/CHANGELOG.md}SCSS-Lint changelog}}
 
-  * Update Sass to version ${project.properties.get("sass.version")}, please check
+~~  * Update Sass to version ${project.properties.get("sass.version")}, please check
+~~     the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
+~~     Note that Ruby Sass has now been deprecated, read the
+~~     {{{http://sass.logdown.com/posts/7081811}blogpost:Ruby Sass is Deprecated}}.
+
+~~  []
+  
+* 3.5.5 Release Notes
+
+  This release features Bourbon version 5.1.0 and Sass version 3.5.7 running on JRuby 9.2.0.0.
+  A complete list of issues can be found in the tracker
+  {{{${project.issueManagement.url}?q=milestone%3A$3.5.5+is%3Aclosed}milestone 3.5.5}}.
+
+** Enhancements and Fixes
+
+  * Update Bourbon to version 5.1.0, please check the
+     {{{https://github.com/thoughtbot/bourbon/blob/master/CHANGELOG.md}Bourbon changelog}}
+     
+  * Update Sass to version 3.5.7, please check
      the {{{http://sass-lang.com/documentation/file.SASS_CHANGELOG.html}Sass changelog}}
      Note that Ruby Sass has now been deprecated, read the
      {{{http://sass.logdown.com/posts/7081811}blogpost:Ruby Sass is Deprecated}}.
-
+     
   * Update Maven dependencies to version 4.5.4
-
+  
   []
-
+  
+  
 * 3.5.4 Release Notes
 
   This release features Bourbon version 5.0.0 and Sass version 3.5.6 running on JRuby 9.2.0.0.
