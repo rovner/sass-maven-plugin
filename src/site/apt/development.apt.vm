@@ -83,11 +83,11 @@ mvn -U org.codehaus.mojo:versions-maven-plugin:2.5:display-plugin-updates
   eg. account, gpg signature,... use the following commands:
 
 +----+
-mvn -Prelease clean release:clean release:prepare
-mvn -Prelease release:perform
+mvn clean release:clean release:prepare
+mvn release:perform
 +----+
 
-  Note that the nexus-staging-maven-plugin will throw an exception
+  Note that the nexus-staging-maven-plugin may throw an exception
   <<<Unhandled: Missing staging repository: nlgeodienstencentrum-...>>>
   because we're deploying straight away.
 
