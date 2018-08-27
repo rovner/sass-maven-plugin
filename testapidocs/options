@@ -19,6 +19,8 @@
 -link
 'https://maven.apache.org/ref/3.5.4/maven-core/apidocs'
 -link
+'https://maven.apache.org/plugin-tools/maven-plugin-annotations/apidocs'
+-link
 'http://commons.apache.org/proper/commons-io/apidocs'
 -link
 'http://maven.apache.org/plugin-testing/maven-plugin-testing-harness/apidocs'
