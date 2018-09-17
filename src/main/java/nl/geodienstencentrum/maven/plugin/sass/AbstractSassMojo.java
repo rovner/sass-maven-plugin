@@ -423,7 +423,7 @@ public abstract class AbstractSassMojo extends AbstractMojo {
 	 * Extract the Bourbon assets to the build directory.
 	 * @param destinationDir directory for the Bourbon resources
 	 */
-	private void extractBourbonResources(String destinationDir) {
+	private synchronized void extractBourbonResources(String destinationDir) {
 		final Log log = this.getLog();
 		try {
 			File destDir = new File(destinationDir);
