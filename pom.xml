@@ -140,7 +140,7 @@
 		<project.build.targetVersion>1.8</project.build.targetVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<sass.version>3.5.7</sass.version>
+		<sass.version>3.6.0</sass.version>
 		<jruby.version>9.2.0.0</jruby.version>
 		<maven-libs.version>3.5.4</maven-libs.version>
 		<scss-lint.version>0.57.0</scss-lint.version>
