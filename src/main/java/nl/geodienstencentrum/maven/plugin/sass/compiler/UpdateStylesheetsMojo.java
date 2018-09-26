@@ -35,7 +35,7 @@ import org.apache.maven.plugins.annotations.Mojo;
  * Mojo that compiles Sass sources into CSS files using
  * {@code update_stylesheets}.
  */
-@Mojo(name = "update-stylesheets", defaultPhase = PROCESS_SOURCES)
+@Mojo(name = "update-stylesheets", defaultPhase = PROCESS_SOURCES, threadSafe = true)
 public class UpdateStylesheetsMojo extends AbstractSassMojo {
 
 	/**

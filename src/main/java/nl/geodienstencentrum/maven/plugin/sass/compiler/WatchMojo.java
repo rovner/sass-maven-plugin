@@ -1,5 +1,5 @@
 /*
- * Copyright 2014-2016 Mark Prins, GeoDienstenCentrum.
+ * Copyright 2014-2018 Mark Prins, GeoDienstenCentrum.
  * Copyright 2010-2014 Jasig.
  *
  * See the NOTICE file distributed with this work for additional information
@@ -28,7 +28,7 @@ import org.apache.maven.plugins.annotations.Mojo;
 /**
  * The Class WatchMojo runs the Sass compiler's {@code watch} process.
  */
-@Mojo(name = "watch")
+@Mojo(name = "watch", threadSafe = true)
 public class WatchMojo extends AbstractSassMojo {
 
 	/** true when we are running on Windows. */

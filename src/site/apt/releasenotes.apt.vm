@@ -6,7 +6,7 @@
 	 2016-02-20
 	 -----
 
-~~ reference: http://maven.apache.org/doxia/references/apt-format.html
+~~ reference: https://maven.apache.org/doxia/references/apt-format.html
 
 ~~ Note that we're using eg. ${project.properties.get("jruby.version")} to work
 ~~     around a limitation getting pom properties with a dot.
@@ -50,7 +50,9 @@ ${project.name} ${project.version} Release Notes
 ~~     Note that Ruby Sass has now been deprecated, read the
 ~~     {{{http://sass.logdown.com/posts/7081811}blogpost:Ruby Sass is Deprecated}}.
 
-~~  []
+  * Mark plugin <<<threadSafe>>>, fixes ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/209}#209}})
+
+  []
   
 * 3.5.5 Release Notes
 
