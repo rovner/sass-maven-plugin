@@ -52,6 +52,9 @@ ${project.name} ${project.version} Release Notes
 
   * Mark plugin <<<threadSafe>>>, fixes ({{{https://github.com/GeoDienstenCentrum/sass-maven-plugin/issues/209}#209}})
 
+  * Require Maven 3.5.0, the previous release (3.3.9) was release almost 3 years ago and 
+    things have changed, time to upgrade if you haven't.
+
   []
   
 * 3.5.5 Release Notes

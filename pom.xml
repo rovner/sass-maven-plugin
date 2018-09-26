@@ -109,7 +109,7 @@
 	<contributors />
 	<mailingLists />
 	<prerequisites>
-		<maven>3.2.5</maven>
+		<maven>3.5.0</maven>
 	</prerequisites>
 	<scm>
 		<connection>scm:git:git://github.com/GeoDienstenCentrum/${project.artifactId}.git</connection>

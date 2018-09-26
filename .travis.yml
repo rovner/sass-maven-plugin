@@ -87,12 +87,6 @@ matrix:
       jdk: openjdk8
     - os: linux
       jdk: oraclejdk8
-      env: VERSION=3.2.5
-    - os: linux
-      jdk: oraclejdk8
-      env: VERSION=3.3.9
-    - os: linux
-      jdk: oraclejdk8
       env: VERSION=3.5.0
  # skip this as it is the current travis-ci linux setup
  #   - os: linux
