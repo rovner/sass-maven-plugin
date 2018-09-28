@@ -13,7 +13,7 @@
 <a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> * you may not use this file except in compliance with the License.</em>
 <a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_comment"> * You may obtain a copy of the License at</em>
 <a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_comment"> *</em>
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * <a href="http://www.apache.org/licenses/LICENSE-2." target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.</a>0</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_comment"> * <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
 <a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_comment"> *</em>
 <a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing, software</em>
 <a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_comment"> * distributed under the License is distributed on an "AS IS" BASIS,</em>
@@ -53,7 +53,7 @@
 <a class="jxr_linenumber" name="L45" href="#L45">45</a>  @Execute(goal = <span class="jxr_string">"scss-lint"</span>
 <a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_comment">//        , phase = LifecyclePhase.COMPILE</em>
 <a class="jxr_linenumber" name="L47" href="#L47">47</a>  )
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportMojo.html">SCSSLintReportMojo</a> <strong class="jxr_keyword">extends</strong> AbstractMavenReport {
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="SCSSLintReportMojo" href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportMojo.html#SCSSLintReportMojo">SCSSLintReportMojo</a> <strong class="jxr_keyword">extends</strong> AbstractMavenReport {
 <a class="jxr_linenumber" name="L49" href="#L49">49</a>  
 <a class="jxr_linenumber" name="L50" href="#L50">50</a>  	<em class="jxr_javadoccomment">/**</em>
 <a class="jxr_linenumber" name="L51" href="#L51">51</a>  <em class="jxr_javadoccomment">	 * ignored for linting, sass options are not used.</em>
@@ -153,7 +153,7 @@
 <a class="jxr_linenumber" name="L145" href="#L145">145</a> 			<strong class="jxr_keyword">return</strong>;
 <a class="jxr_linenumber" name="L146" href="#L146">146</a> 		}
 <a class="jxr_linenumber" name="L147" href="#L147">147</a> 		<strong class="jxr_keyword">try</strong> {
-<a class="jxr_linenumber" name="L148" href="#L148">148</a> 			<strong class="jxr_keyword">final</strong> <a href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportGenerator.html">SCSSLintReportGenerator</a> generator = <strong class="jxr_keyword">new</strong> <a href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportGenerator.html">SCSSLintReportGenerator</a>(
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> 			<strong class="jxr_keyword">final</strong> <a name="SCSSLintReportGenerator" href="../../../../../../nl/geodienstencentr<a name="SCSSLintReportGenerator" href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportGenerator.html#SCSSLintReportGenerator">SCSSLintReportGenerator</a>port/SCSSLintReportGenerator.html#SCSSLintReportGenerator">SCSSLintReportGenerator</a> generator = <strong class="jxr_keyword">new</strong> <a name="SCSSLintReportGenerator" href="../../../../../../nl/geodienstencentrum/maven/plugin/sass/report/SCSSLintReportGenerator.html#SCSSLintReportGenerator">SCSSLintReportGenerator</a>(
 <a class="jxr_linenumber" name="L149" href="#L149">149</a>                     getSink(),
 <a class="jxr_linenumber" name="L150" href="#L150">150</a>                     <strong class="jxr_keyword">this</strong>.getDescription(locale),
 <a class="jxr_linenumber" name="L151" href="#L151">151</a>                     <strong class="jxr_keyword">new</strong> File(getProject().getBasedir() + <span class="jxr_string">"/target"</span>, <span class="jxr_string">"scss-lint.xml"</span>),
