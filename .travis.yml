@@ -113,7 +113,7 @@ after_success:
        [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
        [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
          echo "Attempt to deploy snapshot artifact";
-         travis_wait 20 mvn deploy --settings .travis/settings.xml -DskipTests=true -B;
+         travis_wait 20 mvn deploy --settings .travis/settings.xml -DskipTests=true -B -Dmaven.test.skip=true;
     else
         echo -n "Not deploying snapshot artifact. ";
     fi
@@ -121,7 +121,7 @@ after_success:
        [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] &&
        [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
           echo "Attempt to deploy maven site";
-          travis_wait 20 mvn -e -fae -B site-deploy --settings .travis/settings.xml;
+          travis_wait 30 mvn -e -fae -B site-deploy --settings .travis/settings.xml;
     else
           echo -n "Not deploying maven site. ";
     fi
